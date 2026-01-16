@@ -1,9 +1,13 @@
 package com.helalferrari;
 
+import io.smallrye.jwt.build.Jwt;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import org.eclipse.microprofile.jwt.Claims;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 @Path("pessoa")
