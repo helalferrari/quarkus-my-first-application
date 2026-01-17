@@ -1,5 +1,6 @@
 package com.helalferrari;
 
+import io.micrometer.core.annotation.Counted;
 import io.smallrye.jwt.build.Jwt;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -16,6 +17,7 @@ import java.util.List;
 public class PessoaResource {
 
     @GET
+    @Counted(value = "counted.getPessoa")
     public List<Pessoa> getPessoa() {
         return Pessoa.listAll();
     }

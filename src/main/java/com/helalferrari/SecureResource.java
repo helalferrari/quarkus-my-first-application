@@ -16,7 +16,7 @@ public class SecureResource {
 
     @GET
     @Path("claim")
-    @RolesAllowed("Not-Subscriber")
+    @RolesAllowed("Subscriber")
     public String getClaim() {
         return userName;
     }
